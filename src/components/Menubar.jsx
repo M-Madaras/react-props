@@ -1,6 +1,4 @@
-import { useState } from "react";
-import StudentCard from "./StudentCard";
-// name is state setName is giving it it's State
+
 function Menubar({ name, setName }){
   return (
     <nav style={{ display: 'flex', justifyContent: 'space-between'}}>
