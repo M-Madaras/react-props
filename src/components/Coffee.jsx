@@ -3,8 +3,8 @@ import  {useState} from 'react';
 export default function Coffee() {
     const [coffeeList, setCoffeeList] = useState();
     
-
     // Async Await 2x await
+    // try/catch error catching Must!!! CATCH ERRORS!!!
     const getCoffeeSync = async (temperature) => {
     try {
         const results = await fetch (`https://api.sampleapis.com/coffee/${temperature}`);

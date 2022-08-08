@@ -1,13 +1,13 @@
 import StudentCard from "./StudentCard"
 
 const student = {
-    name: 'Khali Gopaul',
-    age: 37,
-    id: 'r64j83',
-    term: 'Su22',
+    name: 'Mason Madaras',
+    age: 24,
+    id: '1997-08-30',
+    term: 'Swecc#2022',
 }
-
-export default function Main({ name }) {
+// ({destructured})!!!
+export default function Main({name}) {
     return(
         <main>
             <h1>Hello {name || 'Guest'}</h1>
