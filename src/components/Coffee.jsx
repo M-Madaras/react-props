@@ -1,17 +1,24 @@
 import  {useState} from 'react';
-
+// .then .catch 2x .then
 export default function Coffee() {
     const [coffeeList, setCoffeeList] = useState();
-    const getCoffee = (temperature) => {
-    fetch(`https://api.sampleapis.com/coffee/${temperature}`)
-       .then(results => results.json())
-       .then(data => setCoffeeList(data))
-       .catch(err => alert(err))
+    
+
+    // Async Await 2x await
+    const getCoffeeSync = async (temperature) => {
+    try {
+        const results = await fetch (`https://api.sampleapis.com/coffee/${temperature}`);
+        const data = await results.json();
+        setCoffeeList(data);
     }
+    catch(err){
+        alert(err);
+    }
+   }  
     return (
         <>
-        <button onClick={() => getCoffee('hot')}>HOT</button>
-        <button onClick={() => getCoffee('iced')}>ICED</button>
+        <button onClick={() => getCoffeeSync('hot')}>HOT</button>
+        <button onClick={() => getCoffeeSync('iced')}>ICED</button>
         <section>
             <h2>Coffee List</h2>
             {!coffeeList 
