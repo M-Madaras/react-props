@@ -9,11 +9,7 @@ function App() {
   return (
     <>
       <Menubar />
-      <Main
-        name={name}
-        fruit="Banana"
-        total={23}
-        isAmazing={true} />
+      <Main name={name} />
       <Footer />
     </>
   );
